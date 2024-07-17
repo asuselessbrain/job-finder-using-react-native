@@ -1,6 +1,7 @@
 import { ClerkProvider, SignedIn, SignedOut } from "@clerk/clerk-expo";
 import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
+import LoginPage from "../components/LoginPage"
 import { Text, View } from "react-native";
 
 export default function RootLayout() {
@@ -23,7 +24,7 @@ export default function RootLayout() {
         </Stack>
       </SignedIn>
       <SignedOut>
-        <Text style={{fontSize:40}}>Sign Out</Text>
+        <LoginPage />
       </SignedOut>
     </ClerkProvider>
   );
